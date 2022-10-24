@@ -1,0 +1,5 @@
+name: 'Update Repository Description'
+description: 'Read package.json and update description on github repository page.'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
