@@ -1,5 +1,10 @@
 name: 'Update Repository Description'
 description: 'Read package.json and update description on github repository page.'
+inputs:
+  repo:
+    description: 'target repository'
+  repo-token:
+    description: 'github token'
 runs:
   using: 'node16'
   main: 'dist/index.js'

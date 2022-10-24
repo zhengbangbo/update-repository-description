@@ -6,6 +6,8 @@ Github action for update description on repository.
 
 ```yaml
 uses: zhengbangbo/update-repository-description@v0.0.1
+with:
+  repo: ${{ github.repository }}
 ```
 
 ## License

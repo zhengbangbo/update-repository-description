@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  updateDescription:
+    runs-on: ubuntu-latest
+    name: debug
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Read package.json step and patch repository
+        uses: ./ # Uses an action in the root directory
+        with:
+          repo: ${{ github.repository }}
+          repo-token: ${{ secrets.MY_TOKEN }}
