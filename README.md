@@ -9,7 +9,7 @@ Github action for update description on repository.
 - [Example](./.github/workflows/main.yml)
 
 ```yaml
-uses: zhengbangbo/update-repository-description@v0.0.1
+uses: zhengbangbo/update-repository-description@v0.0.2
 with:
   repo: ${{ github.repository }}
   repo-token: ${{ secrets.MY_TOKEN }}
