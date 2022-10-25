@@ -2,6 +2,8 @@
 
 Github action for update description on repository.
 
+![](./img/readme.png)
+
 ## Usage
 
 - [Example](./.github/workflows/main.yml)
