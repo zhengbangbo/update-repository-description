@@ -1,6 +1,5 @@
 # Update Repository Description
-
-Github action for update description on repository.
+[![.github/workflows/main.yml](https://github.com/zhengbangbo/update-repository-description/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/zhengbangbo/update-repository-description/actions/workflows/main.yml)
 
 ![](./img/readme.png)
 
