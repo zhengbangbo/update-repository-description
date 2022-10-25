@@ -13,4 +13,4 @@ jobs:
         uses: ./ # Uses an action in the root directory
         with:
           repo: ${{ github.repository }}
-          repo-token: ${{ secrets.MY_TOKEN }}
+          repo-token: ${{ github.token }}
