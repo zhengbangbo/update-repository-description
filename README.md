@@ -8,7 +8,7 @@
 - [Example](./.github/workflows/main.yml)
 
 ```yaml
-uses: zhengbangbo/update-repository-description@v0.0.2
+uses: zhengbangbo/update-repository-description@v1.0.0
 with:
   repo-token: ${{ secrets.MY_TOKEN }}
 ```
