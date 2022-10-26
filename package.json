@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
-    "test": "jest",
-    "all": "npm run lint && npm run prepare && npm run test"
+    "all": "npm run lint && npm run prepare"
   },
   "repository": {
     "type": "git",
@@ -29,8 +28,8 @@
     "@octokit/core": "^4.1.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.31.1",
-    "eslint": "^8.0.0",
-    "jest": "^27.2.5"
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.26.0",
+    "husky": "^8.0.1"
   }
 }
