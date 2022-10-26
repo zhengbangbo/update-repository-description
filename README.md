@@ -10,7 +10,6 @@
 ```yaml
 uses: zhengbangbo/update-repository-description@v0.0.2
 with:
-  repo: ${{ github.repository }}
   repo-token: ${{ secrets.MY_TOKEN }}
 ```
 

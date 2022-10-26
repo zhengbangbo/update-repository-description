@@ -8,7 +8,7 @@ async function run() {
 
   try {
     const description = JSON.parse(fs.readFileSync('package.json', 'utf8')).description
-    const github_repository = core.getInput('repo')
+    const github_repository = process.env.GITHUB_REPOSITORY
     const auth = core.getInput('repo-token')
 
     const octokit = new Octokit({ auth: auth })
