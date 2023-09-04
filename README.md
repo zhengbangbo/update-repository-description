@@ -14,12 +14,17 @@ with:
 ```
 
 > **Note**
-> 1. Creat [PAT(Personal access token)](https://github.com/settings/tokens) and set `actions secrets` of repository.
-> 2. If `repo-token` use `secrets.GITHUB_TOKEN` or `github.token`, throw `Error: Resource not accessible by integration`. Like [this job](https://github.com/zhengbangbo/update-repository-description/actions/runs/3318862036/jobs/5483297578). Because the API requested in the program is Administration Scope[^1]. And this scope is not in the default permissions of GITHUB_TOKEN[^2]. 
-
-[^1]: [administration scope - GitHub Docs](https://docs.github.com/en/rest/overview/permissions-required-for-github-apps#administration)
-
-[^2]: [Permissions for the `GITHUB_TOKEN` - GitHub Docs](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)
+> 
+> This [job](https://github.com/zhengbangbo/update-repository-description/actions/runs/3318862036/jobs/5483297578) failed due to the following 3 points:
+> 1. [The default  permissions granted to `GITHUB_TOKEN`](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token).
+> 2. The workflows have read permissions in the repository for the contents and packages scopes only **by default**, which means to be restricted.
+> 3. The related REST API belongs to [the administration scope](Administration).
+> 
+> Summarized above, there are 2 ways to set the `repo-token`:
+> 1. Select workflow permissions settings of a repo to the **Read and write permissions** option.
+> 2. Generate a fine-grained personal access token with:
+>     1. **All repositionries** of repository access.
+>     2. **Read and write** access to Adminstration of repository permissions.
 
 ## License
 
